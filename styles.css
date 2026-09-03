@@ -1,14 +1,31 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'SF Pro', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    background: #221D23;
-    color: #FFFFFF;
-    text-align: center; 
-}
 @font-face {
     font-family: 'SF Pro';
-    src: url(src/fonts/SF-Pro.ttf);
+    src: url('src/fonts/SF-Pro.ttf');
 }
+
+body {
+    margin: 0;
+    font-family: 'SF Pro', sans-serif;
+    font-size: 16px;
+    background: #f2e3e2;
+    text-align: center; 
+}
+
+#navbar {
+    background: #FDEEED;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #221D23;
+    transition: color 0.3s ease;
+}
+
+#navbar .portfolio:hover { color: #E36588; }
+#navbar .about:hover     { color: #4CB963; }
+#navbar .contact:hover   { color: #9AC4F8; }
