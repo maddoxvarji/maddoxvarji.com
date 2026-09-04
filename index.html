@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tags.css">
     <title>my epic website</title>
 </head>
 <body>
     <div id="navbar">
         <img width="32" height="32" src="src/images/logo.png" alt="x" id="logo">
-        <a class="portfolio" href="#">Portfolio</a>
-        <a class="about" href="#">About</a>
-        <a class="contact" href="#">Contact</a>
+        <a class="portfolio" onclick="scene(0)">Portfolio</a>
+        <a class="about" onclick="scene(1)">About</a>
+        <a class="contact" onclick="scene(2)">Contact</a>
     </div>
+    <div id="portfolio" class="tab active">
+    <h1>My Portfolio</h1>
+
+    <div class="container">
+    </div>
+</div>
+    <div id="about" class="tab">
+        <h1>About Me</h1>
+    </div>
+    <div id="contact" class="tab">
+        <h1>Contact Me</h1>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

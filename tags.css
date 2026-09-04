@@ -1,0 +1,17 @@
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: #817783;
+    color: #FDEEED;
+    font-size: 13px;
+}
+span[kicad] {
+    background: #FDEEED;
+    color: #817783;
+}
