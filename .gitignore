@@ -1,4 +1,4 @@
 .vercel
 .env*
-.sh
+*.sh
 commits.txt

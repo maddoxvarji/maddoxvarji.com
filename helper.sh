@@ -26,5 +26,5 @@ elif [ "$1" = "push" ]; then
     git commit -m "$(shuf -n 1 commits.txt)"
     git push origin main
 else
-    echo an error occured... none passed or typo in argument.
+    echo "## An error occured... none passed or typo in argument."
 fi
