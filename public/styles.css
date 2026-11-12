@@ -10,6 +10,12 @@
     user-select: none;
     -webkit-user-select: none;
     position: relative;
+    animation: onLoad 1.75s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+@keyframes onLoad {
+    0% {opacity: 0; transform: translateY(10px);}
+    100% {opacity: 1; transform: translateY(0px);}
 }
 
 body {
@@ -54,7 +60,6 @@ body {
     font-size: 1.1rem;
     text-decoration: none;
     cursor: pointer;
-    will-change: transform;
     transition: transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.3s ease;
 }
 

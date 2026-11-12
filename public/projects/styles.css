@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'SF-Pro';
+    src: url('/fonts/SF-Pro.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+    animation: onLoad 1s ease-in-out;
+}
+
+@keyframes onLoad {
+    0% {opacity: 0; transform: translateY(20px);}
+    100% {opacity: 1;}
+}
+
+body {
+    margin: 20px;
+    min-height: 100vh;
+    background-color: #E8E5DA;
+    font-family: 'SF-Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.header {
+    font-size: 3em;
+    color: #02040F;
+}
+
+button {
+    font-weight: bold;
+    color: #E8E5DA;
+    background: #B23A48;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;   
+    transform: translateY(0);
+    padding: 10px;
+}
