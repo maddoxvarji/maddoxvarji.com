@@ -6,16 +6,14 @@
 }
 
 *, *::before, *::after {
-    box-sizing: border-box;
-    user-select: none;
-    -webkit-user-select: none;
-    position: relative;
-    animation: onLoad 1.75s cubic-bezier(0.23, 1, 0.320, 1);
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  position: relative;
 }
 
-@keyframes onLoad {
-    0% {opacity: 0; transform: translateY(10px);}
-    100% {opacity: 1; transform: translateY(0px);}
+:root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body {
@@ -37,6 +35,7 @@ body {
     display: grid;
     grid-template-columns: auto 1fr auto; 
     align-items: center;
+    animation: navIn 2s var(--ease-out) both;
 }
 
 #nav h1 {
@@ -45,6 +44,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     justify-self: start;
+    animation: fadeUp 0.8s var(--ease-out) 0.25s both;
 }
 
 #links {
@@ -54,6 +54,16 @@ body {
     gap: 24px;
     grid-column: 2;
 }
+
+#links a {
+    animation: fadeUp 0.8s var(--ease-out) both;
+}
+
+#links a:nth-child(1) { animation-delay: 0.35s; }
+#links a:nth-child(2) { animation-delay: 0.42s; }
+#links a:nth-child(3) { animation-delay: 0.49s; }
+#links a:nth-child(4) { animation-delay: 0.56s; }
+#links a:nth-child(5) { animation-delay: 0.63s; }
 
 #nav a {
     color: #E5DADA;
@@ -76,4 +86,34 @@ body {
     color: transparent;
     background-clip: text;
     text-align: center;
+    animation: fadeUp 1.1s var(--ease-out) 0.6s both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+@keyframes navIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #nav, #nav h1, #links a, #welcome h1 {
+    animation: none;
+  }
 }
